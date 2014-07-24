@@ -6,4 +6,18 @@ class ApplicationController < ActionController::Base
      @profile= Profile.find_by_id(params['id'])
      render 'show'
    end
+  
+  def new
+  end
+  
+  def create
+    g = Profile.new
+    g.name = params['Name']
+    g.location = params['Location']
+    g.bio = params['Bio']
+    g.src = params['Src']
+    g.year = params['Year']
+    g.save
+    redirect_to "/profile/#{ g.id }"
+  end
 end
