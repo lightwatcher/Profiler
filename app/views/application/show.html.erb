@@ -2,13 +2,13 @@
   <div class='container'>
     <div class='row'>
       <div class='col-md-3'>
-        <img  src="<%= @src %>" alt='Photo'>
+        <img  src="<%= @profile.src %>" alt='Photo'>
       </div>
       <div class='col-md-9'>
-        <p><b><%= @name %></b> Member since <%=@year%> </p> 
-        <p> <%= @bio %></p>
+        <p><b><%= @profile.name %></b> Member since <%=@profile.year%> </p> 
+        <p> <%= @profile.bio %></p>
         </div>
-      <p><strong>Location</strong>: <%= @location %></p>
+      <p><strong>Location</strong>: <%= @profile.location %></p>
       <p><strong>Completion:</strong></p>
       <div class="progress">
   <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 95%;">
