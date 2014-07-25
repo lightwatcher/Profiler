@@ -20,4 +20,19 @@ class ApplicationController < ActionController::Base
     g.save
     redirect_to "/profile/#{ g.id }"
   end
-end
+  
+  def edit
+    @profile = Profile.find_by_id(params['id'])
+  end
+  
+  def update
+    g = Profile.find_by_id(params['id'])
+   g.name = params['Name']
+    g.location = params['Location']
+    g.bio = params['Bio']
+    g.src = params['Src']
+    g.year = params['Year']
+    g.save
+    redirect_to "/profile/#{ g.id }"
+  end
+ end
