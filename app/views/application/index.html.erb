@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset2">
+        <h2>Users:</h2>
+        <ul>         
+<%@profiles.each do |profile|%>
+           <li>
+              <h3> <%= profile.name %>: </h3> 
+             <h5><a href='/profile/<%= profile.id %>'> Show, </a> <a href='/profile/<%= profile.id %>/edit'> Edit, </a> <a href='/profile/<%= profile.id %>/delete'> Delete. </a></h5>
+          </li>
+ <% end %>
+       </ul>
+      </div>
+    </div>
+  </div>

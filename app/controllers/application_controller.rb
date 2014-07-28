@@ -35,4 +35,11 @@ class ApplicationController < ActionController::Base
     g.save
     redirect_to "/profile/#{ g.id }"
   end
+  def destroy
+    g = Profile.find_by_id(params['id'])
+    g.destroy
+  end
+  def index
+    @profiles = Profile.all
+  end
  end
