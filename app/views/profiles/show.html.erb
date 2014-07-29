@@ -2,7 +2,7 @@
   <div class='container'>
     <div class='row'>
       <div class='col-md-3'>
-        <img  src="<%= @profile.src %>" alt='Photo'>
+        <img  src="<%= @profile.src %>" alt='Photo' height='300px' width='200px'>
       </div>
       <div class='col-md-9'>
         <p><b><%= @profile.name %></b> Member since <%=@profile.year%> </p> 
@@ -15,5 +15,6 @@
     95%
   </div>
 </div>
+<a href="/new_profile">New</a>
 <a href="/profile/<%= @profile.id %>/edit">Edit</a>
 <a href="/profile/<%= @profile.id %>/delete">Delete</a>
